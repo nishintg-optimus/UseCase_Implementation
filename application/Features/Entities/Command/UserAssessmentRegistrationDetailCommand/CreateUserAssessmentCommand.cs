@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MediatR;
+using UseCaseRJ.domain.Entities;
 
-namespace UseCaseRJ.domain.Entities
+namespace UseCaseRJ.application.Features.Entities.Command.UserAssessmentRegistrationDetailCommand
 {
-    public class UserAssessmentRegistrationDetail
+    public class CreateUserAssessmentCommand : IRequest<bool>
     {
-        public int id { get; set; }
-        public int assessmentidext { get; set; }
-
+        //public int id { get; set; }
+       
         public DateTime invitedAt { get; set; }
 
         public DateTime RegisteredAt { get; set; }
@@ -19,10 +20,7 @@ namespace UseCaseRJ.domain.Entities
 
         public DateTime StartedAt { get; set; }
 
-        public int userid { get; set; } //foreign key
-
-
-
+        public int userid { get; set; }
 
 
     }
